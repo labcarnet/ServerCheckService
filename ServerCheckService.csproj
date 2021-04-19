@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>packages\NLog.4.7.9\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -54,6 +57,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConectionServer.cs" />
+    <Compile Include="lib\Account.cs" />
+    <Compile Include="lib\Blacklist.cs" />
+    <Compile Include="lib\Contacts.cs" />
+    <Compile Include="lib\Errors.cs" />
+    <Compile Include="lib\Files.cs" />
+    <Compile Include="lib\Groups.cs" />
+    <Compile Include="lib\Messages.cs" />
+    <Compile Include="lib\Payments.cs" />
+    <Compile Include="lib\Phones.cs" />
+    <Compile Include="lib\Premium.cs" />
+    <Compile Include="lib\Senders.cs" />
+    <Compile Include="lib\Stats.cs" />
+    <Compile Include="lib\Subaccounts.cs" />
+    <Compile Include="lib\Templates.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -68,6 +86,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerwerSms.cs" />
+    <Compile Include="StringCipher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,20 +103,6 @@
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Cipher\Cipher.csproj">
-      <Project>{7346d304-5440-4908-abd2-3f0d9883e4be}</Project>
-      <Name>Cipher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConnectionServer\ConnectionServers.csproj">
-      <Project>{446d2d31-861c-4904-bc58-e989da3f5a14}</Project>
-      <Name>ConnectionServers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServerSMS\SerwerSMS.csproj">
-      <Project>{f7b7fcb7-154d-4646-9879-3ffca925f60c}</Project>
-      <Name>SerwerSMS</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

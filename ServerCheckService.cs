@@ -1,6 +1,4 @@
-﻿using Cipher;
-using ConnectionServer;
-using System;
+﻿using System;
 using System.Configuration;
 using System.ServiceProcess;
 using System.Timers;
@@ -93,7 +91,7 @@ namespace ServerCheckService
         {
             var messageText = $"Serwer numer: {serverNr} nie odpowieada!!!";
 
-            Logger.Info(serwersms.SerwerSMS.SendSms(_loginSms, _passSms, _phoneNumber, messageText));
+            Logger.Info(SerwerSMS.SendSms(_loginSms, _passSms, _phoneNumber, messageText));
             Logger.Info(messageText);
         }
 
